@@ -165,9 +165,9 @@ export default {
 		  toggleModal(){
 				this.modalActive = !this.modalActive;
 			},
-         onLoginWithGoogle() {
+        async onLoginWithGoogle() {
             try {
-                this.loginWithGoogle()
+               await this.loginWithGoogle()
                 this.$router.push({
                     name: 'dishes',
                 })
