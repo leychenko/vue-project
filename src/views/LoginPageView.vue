@@ -46,9 +46,9 @@
 		                            {{ $t('loginPage.buttonSignIn') }}
 		                        </v-btn>
 	                        </div>
-	                        <v-btn variant="outlined" class="form-button-google" @click="onLoginWithGoogle">
+	                        <button type="button" class="form-google" @click="onLoginWithGoogle">
 	                            <font-awesome-icon :icon="['fab', 'google']" /><span> {{ $t('loginPage.google') }}</span>
-	                        </v-btn>
+	                        </button>
 	                    </v-form>
 	                </div>
 	            </div>
@@ -136,12 +136,6 @@ export default {
         },
 		  
     },
-	//  watch:{
-	// 	hasError(newVal){
-	// 		if(newVal){
-	// 			this.modalActive = true;
-	// 		}
-	// 	},
 
 	//  },
     created() {
@@ -160,9 +154,7 @@ export default {
             'getAuthData',
         ]),
         ...mapActions('users',['setError']),
-		  toggleModal(){
-				this.modalActive = !this.modalActive;
-			},
+
         async onLoginWithGoogle() {
             try {
               const success = await this.loginWithGoogle()

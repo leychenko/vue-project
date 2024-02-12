@@ -55,10 +55,18 @@
 			  align-items: center;
 			  width: 100%;
 		}
-}
-.form-button-google {
-	@include adaptiveValue("font-size", 20, 16);
+
 }
 
+.form-google {
+	@include adaptiveValue("font-size", 18, 16);
+	outline: toRem(1) solid rgba(255, 255, 255, 0.656);	
+	padding: toRem(10);
+	display: flex;
+	gap: toRem(5);
+	justify-content: center;
+	align-items: center;
+	border-radius: toRem(3);
+}
 
 
