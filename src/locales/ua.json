@@ -35,7 +35,8 @@
         "button": "Зарееструватись",
         "buttonSignIn": "Увійти",
         "google": "Увійти з Google",
-        "text": "Увійдіть за допомогою Google аккаунта"
+        "text": "Увійдіть за допомогою Google аккаунта",
+		  "errorBtn":"Повернутись"
     },
     "contact-page": {
         "gideTitle": "Наші контакти :",

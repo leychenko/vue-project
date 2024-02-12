@@ -35,7 +35,8 @@
         "button": "Register",
         "buttonSignIn": "Sign in",
         "google": "Register with a Google",
-        "text": "Sign in with a Google account"
+        "text": "Sign in with a Google account",
+        "errorBtn": "Back"
     },
     "contact-page": {
         "gideTitle": "Our contacts :",

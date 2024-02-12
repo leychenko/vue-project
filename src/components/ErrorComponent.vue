@@ -5,7 +5,7 @@
 				<font-awesome-icon :icon="['fas', 'triangle-exclamation']" size="2x"/>
 				<h2>{{ hasError }}</h2>
 			</div>
-			<button type="button" class="button" @click="onBack">Повернутись</button>
+			<button type="button" class="button" @click="onBack">{{$t('loginPage.errorBtn')}}</button>
 		</div>
 </template>
 

@@ -76,11 +76,12 @@ router.beforeEach(async (to) => {
     if (to.meta?.requiredAuth) {
         let isAuthenticated = store.state.auth.user
 
-        if (!isAuthenticated) isAuthenticated = await store.dispatch('auth/loginWithCredential')
+      //   if (!isAuthenticated) isAuthenticated = await store.dispatch('auth/loginWithCredential')
 
         if (!isAuthenticated)
             return {
                 name: 'login',
+                query: { redirect: to.fullPath },
             }
     }
 })

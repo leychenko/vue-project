@@ -136,18 +136,16 @@ export default {
         },
 		  
     },
-	 watch:{
-		hasError(newVal){
-			if(newVal){
-				this.modalActive = true;
-			}
-		},
+	//  watch:{
+	// 	hasError(newVal){
+	// 		if(newVal){
+	// 			this.modalActive = true;
+	// 		}
+	// 	},
 
-	 },
+	//  },
     created() {
         this.loadList;
-
-		  console.log(this.countRanks);
     },
 	 
 	 beforeUnmount() {
@@ -167,7 +165,8 @@ export default {
 			},
         async onLoginWithGoogle() {
             try {
-               await this.loginWithGoogle()
+              const success = await this.loginWithGoogle()
+				  if(success)
                 this.$router.push({
                     name: 'dishes',
                 })
@@ -197,7 +196,6 @@ export default {
             } catch (error) {
                 if (error.message == 'Firebase: Error (auth/invalid-credential).') {
                     this.setError(this.errorMsg2)
-						
                 }
             }
         },
