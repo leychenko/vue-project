@@ -1,0 +1,86 @@
+.chefsPage {
+	@include adaptiveValue("padding-top", 180, 80);
+	@include adaptiveValue("padding-bottom", 180, 80);
+
+		// .chefsPage__wrapper
+		&__wrapper {
+			padding: 0 toRem(10);
+			margin: 0 auto;
+			@media (max-width:$tablet){
+				padding: 0;
+			}
+		}
+}
+.chef {
+	max-width: toRem(1000);
+		display: flex;
+		flex-direction: column;
+		gap: toRem(25);
+		@include adaptiveValue("font-size", 22, 16);
+		
+
+		// .chef__card
+		&__card {
+			display:flex;
+			border-radius: toRem(5);
+			gap: toRem(20);
+			background-color: rgba(255, 255, 255, 0.48);
+			@media (max-width: em(650)){
+				 flex-direction: column; 
+			}
+		}
+		// .chef__image
+	// 	&__image {
+   //      position: relative;
+   //      padding-bottom: 60%;
+   //      img {
+	// 		border-radius: toRem(5) toRem(0) toRem(0) toRem(5);
+   //          position: absolute;
+   //          top: 0;
+   //          left: 0;
+   //          width: 100%;
+   //          height: 100%;
+   //          object-fit: cover;
+   //          border-radius: toRem(4);
+   //      }
+   //  }
+		&__image {
+			
+			max-width: toRem(350);
+			img{
+				border-radius: toRem(5) toRem(0) toRem(0) toRem(5);
+				max-width: 100%;
+			}
+			@media (max-width: em(650)){
+				  max-width: 100%;
+			}
+		}
+		// .chef__body
+		&__body {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			gap: toRem(15);
+			@media (max-width: em(650)){
+				  padding: toRem(10);
+			}
+		}
+		// .chef__name
+		&__name {
+			color: $greenColor;
+		}
+		// .chef__nomination
+		&__nomination {
+			display: flex;
+			flex-direction: column;
+			@include adaptiveValue("gap", 20, 10);
+			
+		}
+		// .chef__rating
+		&__rating {
+			span{
+				margin-left: toRem(10);
+				color: yellow;
+			}
+		}
+}

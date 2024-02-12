@@ -1,0 +1,24 @@
+.notFound {
+	padding-top: toRem(160);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: toRem(40);
+		// .notFound__icon
+		&__icon {
+			@include adaptiveValue("font-size", 80, 40);
+		}
+		// .notFound__title
+		&__title {
+			@include adaptiveValue("font-size", 40, 20);
+
+		}
+		// .notFound__button
+		&__button {
+			display: flex;
+			align-items: center;
+			gap: toRem(15);
+		}
+}
+.button {
+}

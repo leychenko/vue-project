@@ -1,0 +1,158 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.main {
+    flex-grow: 1;
+}
+.footer {
+    @include adaptiveValue('padding-top', 30, 15);
+    @include adaptiveValue('padding-bottom', 30, 15);
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 500;
+    background-color: rgba(47, 47, 46, 0.567);
+}
+.main-button{
+	@include adaptiveValue("margin-top", 100, 40);
+}
+.title {
+    font-family: $fontFamily;
+    @include adaptiveValue('font-size', 55, 40);
+    &_small {
+        @include adaptiveValue('font-size', 40, 20);
+    }
+	 &_home{
+		@include adaptiveValue("padding-top", 60, 40);
+		@include adaptiveValue("font-size", 33, 18);
+	 }
+}
+.subtitle {
+    @include adaptiveValue('font-size', 21, 16);
+    font-family: $fontFamily;
+    font-weight: 700;
+}
+.test {
+    color: red;
+}
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    @include adaptiveValue('padding-right', 57, 25);
+    @include adaptiveValue('padding-left', 57, 25);
+    background: $greenColor;
+    @include adaptiveValue('font-size', 18, 14);
+    font-weight: 700;
+    line-height: math.div(36, 12);
+    letter-spacing: toRem(0.5);
+    border-radius: toRem(43);
+    transition: all 0.3s ease 0s;
+    &_small {
+        @include adaptiveValue('padding-right', 15, 10);
+        @include adaptiveValue('padding-left', 15, 10);
+        @include adaptiveValue('font-size', 16, 14);
+        border-radius: toRem(12);
+    }
+    &_google {
+        border-radius: toRem(12);
+        @include adaptiveValue('padding-top', 15, 10);
+        @include adaptiveValue('padding-bottom', 15, 10);
+        @include adaptiveValue('padding-right', 40, 20);
+        @include adaptiveValue('padding-left', 40, 20);
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            color: #fff;
+            background: rgba(52, 199, 89, 0.793);
+        }
+    }
+}
+.app-view {
+    min-height: 100vh;
+    color: $mainColor;
+    background: url(@/assets/img/main-fon.png) 0 0 / cover no-repeat;
+}
+.icon {
+    opacity: 0.5;
+}
+:disabled {
+    opacity: 0.6;
+    @media (any-hover: hover) {
+        &:hover {
+            color: $blackColor;
+            background-color: $greenColor;
+            cursor: not-allowed;
+        }
+    }
+}
+//============================= card =================================
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: $bgColor;
+    border-radius: toRem(4);
+    // .card__image
+    &__image {
+        position: relative;
+        padding-bottom: 100%;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: toRem(4);
+        }
+    }
+    // .card__body
+    &__body {
+		flex-grow: 1;
+        padding: toRem(20);
+		  display: flex;
+		  flex-direction: column;
+		  gap: toRem(10);
+    }
+    // .card__title
+    &__title {
+        @include adaptiveValue('font-size', 28, 16);
+        line-height: math.div( 28, 16);
+    }
+    // .card__subtitle
+    &__subtitle {
+		color:grey;
+        font-size: toRem(12);
+    }
+    // .card__text
+    &__text {
+		flex-grow: 1;
+		font-size: toRem(13);
+        line-height: 138%;
+        letter-spacing:toRem(-0.162);
+    }
+	 &__price{
+		font-size: toRem(22);
+		&::before{
+			content:'';
+			display: block;
+			height: toRem(1);
+			width: 100%;
+			background-color: rgba(255, 255, 255, 0.208);
+			margin-bottom: toRem(15);
+		}
+	 }
+    // .card__action
+    &__action {
+		padding: toRem(15);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+    }
+
+}

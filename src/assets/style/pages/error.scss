@@ -1,0 +1,22 @@
+.error-container {
+	@include adaptiveValue("padding-top", 200, 100);
+	display:flex;
+	gap: toRem(30);
+	flex-direction: column;
+	align-items: center;
+}
+.error {
+		// .error__content
+		&__content {
+			@include adaptiveValue("font-size", 30, 18);
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			gap: toRem(25);
+		}
+		// .error__button
+		&__button {
+			
+		}
+}
+

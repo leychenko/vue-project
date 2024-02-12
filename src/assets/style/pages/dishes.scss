@@ -1,0 +1,103 @@
+.dishes-wrapper {
+	@include adaptiveValue("padding-top", 130, 60);
+    max-width: toRem(1100);
+    margin: 0 auto;
+}
+.dishes {
+    cursor: pointer;
+    padding-top: toRem(30);
+    padding-bottom: toRem(200);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(toRem(290), 1fr));
+    @include adaptiveValue('gap', 30, 15);
+    @media (any-hover: hover) {
+    }
+    // .dishes__card
+    &__card {
+    }
+}
+.card {
+    transition: all 0.3s ease 0s;
+    &:hover {
+        transform: scale(1.01);
+        box-shadow: 0 0 toRem(6) toRem(0.1) white;
+    }
+    // .card__image
+    &__image {
+    }
+    // .card__body
+    &__body {
+		
+    }
+    // .card__title
+    &__title {
+    }
+    // .card__text
+    &__text {
+    }
+    // .card__action
+    &__action {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(10);
+    }
+    // .card__rating
+    &__rating {
+    }
+    // .card__button
+    &__button {
+        font-size: toRem(10);
+        letter-spacing: toRem(2);
+        border-radius: toRem(20);
+        text-transform: uppercase;
+        padding: toRem(15) toRem(32);
+        background-color: $greenColor;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease 0s;
+        span {
+			transition: color 0.3s ease 0s;
+            color: black;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: rgba(52, 199, 89, 0.77);
+                span {
+                    color: $mainColor;
+                }
+            }
+        }
+    }
+}
+.dialog {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding: toRem(20);
+	// .dialog__title
+		&__title{
+			@include adaptiveValue("font-size", 25, 16);
+			font-weight: 700;
+			line-height: math.div( 25, 16);
+		}
+		// .dialog__action
+		&__action {
+			display: flex;
+			justify-content: center;
+			@include adaptiveValue("gap", 30, 10);
+		}
+		// .dialog__button
+		&__button {
+			border: toRem(1) solid grey;
+			@include adaptiveValue("padding", 10, 5);
+			border-radius: toRem(5);
+			flex: 0 1 30%;
+			@include adaptiveValue("font-size", 18, 16);
+		}
+		// .dialog__link
+		&__link {
+		}
+}
+

@@ -1,0 +1,77 @@
+{
+    "menu": {
+        "home": "Home",
+        "contacts": "Contacts",
+        "chefs": "Chefs",
+        "login": "Login",
+        "dishes": "Menu"
+    },
+    "homePage": {
+        "title": "Your Favourite Food Delivered Hot & Fresh",
+        "button": "Order Now",
+        "text": "HEALTHY SWITCHER chefs do all the prep work, like peeling, chopping & marinating, so you can cook a fresh homemade dinner in just 15 minutes.",
+        "linkTime": {
+            "today": "Today 10:00 am - 8:00 pm",
+            "workingHours": "working hours"
+        },
+        "linkLocation": {
+            "adress": "Velyka Vasylkivska 100",
+            "location": "Get Directions"
+        },
+        "linkPhone": {
+            "number": "+38(999)959-59-59",
+            "text": "Call Online"
+        }
+    },
+    "message": {
+        "welcome": "Welcome to our clinic"
+    },
+    "loginPage": {
+        "title": "Sign in to use services",
+        "titleLog": "Sign up to be able to order meals",
+        "name": "Name",
+        "email": "E-mail",
+        "password": "Password",
+        "button": "Register",
+        "buttonSignIn": "Sign in",
+        "google": "Register with a Google",
+        "text": "Sign in with a Google account"
+    },
+    "contact-page": {
+        "gideTitle": "Our contacts :",
+        "gideText": "Via Giorgio Zoega, 59, 00164 Roma RM, Italy ",
+        "workingHours": "We working"
+    },
+    "chefCard": {
+        "text": "Experience",
+        "year": "years",
+        "rating": "Rating"
+    },
+    "cardData": {
+        "button": "order",
+        "title": "Price",
+        "currency": "₴"
+    },
+    "cart": {
+        "title": "Your order",
+        "totalPrice": "Total bill",
+        "cartNull": "Basket is empty",
+        "cartLinkBack": "Return to order",
+		  "cartBill":"Pay"
+    },
+    "mainCard": {
+        "title": "OUR STORY",
+        "title2": "MARKET",
+        "subtitle": "discover",
+        "subtitle2": "our",
+        "text": "In a Renaissance garden steps away from Plaza España, a 24-hour address for foodies that includes a restaurant, organic juice bar, tea room, cocktail bar and organic market. Enjoy on the table or take home products that are purely 100% natural, organic and sustainable.",
+        "text2": "Inspired by London markets such as the 'Queens Road Farmers' in London, organic and sustainable, our bio market hosts products coming directly from farms"
+    },
+    "notFound": {
+        "title": "Page Not Found",
+        "button": "Back to home page"
+    },
+    "error": {
+        "title": "Upss"
+    }
+}
